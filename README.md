@@ -34,11 +34,11 @@ Examples related to IoT have been developed using a Raspberry Pi kit by Vilros, 
 The Truffle framework has been used in some examples of smart contract deployment, and is available at http://truffleframework.com/. Any latest version available via npm should be appropriate.
 
 ##Related Products
-* [Practical Blockchain Development](Current URL?utm_source=github&utm_medium=repository&utm_campaign=9781786465603)
+* [Practical Blockchain Development](https://www.packtpub.com/application-development/ethereum-programming?utm_source=github&utm_medium=repository&utm_campaign=9781786463715)
 
-* [Building Blockchain Projects](Current URL?utm_source=github&utm_medium=repository&utm_campaign=9781787122147)
+* [Building Blockchain Projects](https://www.packtpub.com/application-development/ethereum-programming?utm_source=github&utm_medium=repository&utm_campaign=9781786463715)
 
-* [Ethereum Programming](Current URL?utm_source=github&utm_medium=repository&utm_campaign=9781786463715)
+* [Ethereum Programming](https://www.packtpub.com/application-development/ethereum-programming?utm_source=github&utm_medium=repository&utm_campaign=9781786463715)
 
 ###Suggestions and Feedback
 [Click here](https://docs.google.com/forms/d/e/1FAIpQLSe5qwunkGf6PUvzPirPDtuy1Du5Rlzew23UBp2S-P3wB-GcwQ/viewform) if you have any feedback or suggestions.

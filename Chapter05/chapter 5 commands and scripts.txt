@@ -1,0 +1,40 @@
+Zcash mining
+sudo apt-get install \
+build-essential pkg-config libc6-dev m4 g++-multilib \
+autoconf libtool ncurses-dev unzip git python \
+zlib1g-dev wget bsdmainutils automake
+
+$ git clone https://github.com/zcash/zcash.git
+
+drequinox@drequinox-OP7010:~/.zcash-params$ pwd
+/home/drequinox/.zcash-params
+drequinox@drequinox-OP7010:~/.zcash-params$ ls -ltr
+-rw-rw-r-- 1 drequinox drequinox      1449 Oct 24 16:46 sprout-verifying.key
+-rw-rw-r-- 1 drequinox drequinox 910173851 Oct 24 16:46 sprout-proving.key
+
+./zcutil/build.sh -j$(nproc)
+
+./zcashd --daemon
+
+
+generate new address
+$:~/zcash/src$ ./zcash-cli z_getnewaddress
+T-address
+drequinox@drequinox-OP7010:~/zcash/src$ ./zcash-cli getnewaddress
+
+
+Downloading and compiling nheqminer
+sudo apt-get install cmake build-essential libboost-all-dev
+
+git clone https://github.com/nicehash/nheqminer.git
+
+cd nheqminer/nheqminer
+
+mkdir build
+
+cd build
+
+cmake ..
+
+make
+

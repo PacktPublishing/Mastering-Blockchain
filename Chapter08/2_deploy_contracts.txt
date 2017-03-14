@@ -1,0 +1,4 @@
+module.exports = function(deployer) {
+  deployer.deploy(Addition);
+  deployer.autolink();
+ };

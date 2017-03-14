@@ -1,0 +1,10 @@
+contract('Addition', function(accounts) {
+  it(" 100 + 100 = 200 ", function(){
+    var AddContract = Addition.deployed();
+     AddContract.addx(100, 100, {from:accounts[0],gas:1000000}).then(function(a) {
+        return AddContract.retrievex.call().then(function(Result){
+            assert.equal(Result, 200, "100 + 100 = 200 is expected");
+       });
+    });
+  });
+});

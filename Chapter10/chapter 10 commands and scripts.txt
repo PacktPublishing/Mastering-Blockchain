@@ -1,0 +1,31 @@
+pact example
+(begin-tx) 'testTransaction ;Begin transaction with optinal NAME.
+;Set transaction data in JSON format or pact types
+(env-data { "keyset": {"keys": ["admin"], "pred": "keys-any"}})
+;Define keyset as NAME with KEYSET
+(define-keyset 'admin-keyset (read-keyset "keyset"))
+;Set transaction signature KEYS
+(env-keys "admin")
+;define module using syntax (module NAME KEYSET [DOCSTING] DEFS . . .)
+(module additionModule 'admin-keyset
+  ;define function that takes three arguments x y z
+  (defun addition (x y z) (+x (+y z)))
+)
+(commit-tx) ;Commit transaction.
+;use the function addition
+(use 'additionModule)
+;run the function additions
+(format "Result : {}" (addition 100 200 300))
+
+
+
+
+blocapps installation
+$ sudo npm install
+ 
+$ bloc genkey
+$ bloc upload Greeter “Hello bloc”
+$ bloc start
+
+
+

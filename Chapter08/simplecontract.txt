@@ -1,0 +1,21 @@
+if (typeof web3 !== 'undefined') {
+  web3 = new Web3(web3.currentProvider);
+} else {
+  web3 = new Web3(new Web3.providers.HttpProvider("http://localhost:8001"));
+}
+console.log("Coinbase: " + web3.eth.coinbase);
+var simplecontractaddress = "0x94a1107f2585f0ab931c71f2f8f02e9f5ab888c0";
+simplecontractinstance = web3.eth.contract(simplecontractcompiled.valueChecker.info.abiDefinition).at(simplecontractaddress);
+var code = web3.eth.getCode(simplecontractaddress);
+console.log("Contract balance: " + web3.eth.getBalance(simplecontractaddress));
+console.log("simple contract code" + code);
+function callMatchertrue() {
+        var txn = simplecontractinstance.Matcher.call(12);{
+       };
+    console.log("return value: " + txn);
+}
+function callMatcherfalse() {
+        var txn = simplecontractinstance.Matcher.call(1);{
+       };
+    console.log("return value: " + txn);
+}

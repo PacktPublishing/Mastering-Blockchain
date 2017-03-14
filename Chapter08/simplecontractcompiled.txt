@@ -1,0 +1,41 @@
+simplecontractcompiled={
+  valueChecker: {
+    code: "0x6060604052600a60005534610000575b60878061001c6000396000f3606060405260e060020a6000350463f9d55e21811                                                                   4601c575b6000565b346000576029600435603d565b604080519115158252519081900360200190f35b6000805460ff831610608157604                                                                   080516001815290517f3eb1a229ff7995457774a4bd31ef7b13b6f4491ad1ebb8961af120b8b4b6239c9181900360200190a15060015b5                                                                   b91905056",
+    info: {
+      abiDefinition: [{
+    constant: false,
+    inputs: [{
+        name: "x",
+        type: "uint8"
+    }],
+    name: "Matcher",
+    outputs: [{
+        name: "",
+        type: "bool"
+    }],
+    payable: false,
+    type: "function"
+}, {
+    anonymous: false,
+    inputs: [{
+        indexed: false,
+        name: "returnValue",
+        type: "bool"
+    }],
+    name: "valueEvent",
+    type: "event"
+}],
+      compilerOptions: "--combined-json bin,abi,userdoc,devdoc --add-std --optimize",
+      compilerVersion: "0.4.6",
+      developerDoc: {
+        methods: {}
+      },
+      language: "Solidity",
+      languageVersion: "0.4.6",
+      source: "pragma solidity ^0.4.0; contract valueChecker { uint price=10; event valueEvent(bool returnValu                                                                   e); function Matcher (uint8 x) returns (bool) { if (x>=price) { valueEvent(true); return true; } } }",
+      userDoc: {
+        methods: {}
+      }
+    }
+  }
+}

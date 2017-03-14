@@ -1,0 +1,16 @@
+var Web3 = require('web3');
+if (typeof web3 !== 'undefined') {
+  web3 = new Web3(web3.currentProvider);
+} else {
+   web3 = new Web3(new Web3.providers.HttpProvider("http://localhost:9002"));
+}
+var Gpio = require('onoff').Gpio;
+var led = new Gpio(21,'out');
+var coinbase = web3.eth.coinbase;
+var ABIString = '[{"constant":false,"inputs":[{"name":"x","type":"uint8"}],"name":"getRent","outputs":[{"name":"","type":"bool"}],"payable":false,"type":"function"},{"anonymous":false,"inputs":[{"indexed":false,"name":"returnValue","type":"bool"}],"name":"roomRented","type":"event"}]';
+var ABI = JSON.parse(ABIString);
+var ContractAddress = '0x151ce17c28b20ce554e0d944deb30e0447fbf78d';
+web3.eth.defaultAccount = web3.eth.accounts[0];
+var simpleiot = web3.eth.contract(ABI).at(ContractAddress);
+var event = simpleiot.roomRented( {}, function(error, result) {
+if (!error) {led.writeSync(1); }});

@@ -1,0 +1,13 @@
+index.html
+<html>
+<head>
+    <title>SimpleContract Interactor</title>
+    <script src="./web3.min.js"></script>
+    <script src="./simplecontractcompiled.js"></script>
+    <script src="./simplecontract.js"></script>
+</head>
+<body>
+    <button onclick="callMatchertrue()">callTrue</button>
+    <button onclick="callMatcherfalse()">callFalse</button>
+</body>
+</html>

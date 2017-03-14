@@ -1,0 +1,34 @@
+sawtooth setup
+$ git clone https://github.com/IntelLedger/sawtooth-core.git
+$ cd sawtooth-core/tools
+$ vagrant up
+
+
+$ vagrant halt
+Or
+$ vagrant destroy
+
+ssh into the vagrant Sawtooth box.
+$ vagrant ssh
+
+build the Sawtooth Lake core
+$ /project/sawtooth-core/bin/build_all
+run transaction validator
+$ /project/sawtooth-core/docs/source/tutorial/genesis.sh
+
+
+
+
+
+$ cd /project/saw-toothcore
+Run the transaction validator:
+$ ./bin/txnvalidator -v -F ledger.transaction.integer_key --config /home/ubuntu/sawtooth/v0.json
+
+
+
+./bin/sawtooth keygen --key-dir validator/keys mkt
+
+
+Corda clone
+$ git clone https://github.com/corda/corda.git
+

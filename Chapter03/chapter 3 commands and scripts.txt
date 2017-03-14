@@ -1,0 +1,72 @@
+$ sudo apt-get install openssl
+
+OPENSSL example how to encrypt and decrypt using AES
+:~/Crypt$ openssl enc -aes-256-cbc -in message.txt -out message.bin
+
+:~/Crypt$ openssl enc -base64 -in message.bin -out message.b64
+:~/Crypt$ ls -ltr
+
+:~/Crypt$ openssl enc -d -aes-256-cbc -in message.bin -out message.dec
+
+:~/Crypt$ ls -ltr
+
+:~/Crypt$ openssl enc -d -base64 -in message.b64 -out message.ptx
+
+How to generate public and private key pairs
+~/Crypt$ openssl genpkey -algorithm RSA -out privatekey.pem -pkeyopt rsa_keygen_bits:1024
+
+~/Crypt$ cat privatekey.pem
+
+
+:~/Crypt$ openssl rsa -pubout -in privatekey.pem -out publickey.pem
+
+:~/Crypt$ openssl rsa -text -in privatekey.pem
+
+~/Crypt$ openssl pkey -in publickey.pem -pubin -text
+
+How to encrypt and decrypt using RSA with OpenSSL
+:~/Crypt$ #openssl rsautl -encrypt -inkey publickey.pem -pubin -in message.txt -out message.rsa
+:~/Crypt$ openssl rsautl -decrypt -inkey privatekey.pem -in message.rsa -out message.dec
+:~/Crypt$ cat message.dec
+
+
+ECC using OpenSSL
+Crypt$ openssl ecparam -list_curves
+~/Crypt$ openssl ecparam -name secp256k1 -genkey -noout -out ec-privatekey.pem
+~/Crypt$ cat ec-privatekey.pem
+~/Crypt$ openssl ec -in ec-privatekey.pem -pubout -out ec-pubkey.pem
+~/Crypt$ cat ec-pubkey.pem
+~/Crypt$ openssl ec -in ec-privatekey.pem -text -noout
+:~/Crypt$ openssl ec -in ec-pubkey.pem -pubin -text -noout
+~/Crypt$ openssl ecparam -name secp256k1 -out secp256k1.pem
+cat secp256k1.pem
+~/Crypt$ openssl ecparam -in secp256k1.pem -text -param_enc explicit -noout
+:~/Crypt$ echo -n 'Hello' | openssl dgst -sha256
+:~/Crypt$ echo -n 'hello' | openssl dgst -sha256
+
+
+How to generate digital signature
+:~/Crypt$ openssl dgst -sha256 message.txt
+:~/Crypt$ openssl dgst -sha256 -sign privatekey.pem -out singature.bin message.txt
+:~/Crypt$ ls -ltr
+:~/Crypt$ cat singature.bin
+:~/Crypt$ openssl dgst -sha256 -verify publickey.pem -signature signature.bin message.txt
+:~/Crypt$ openssl dgst -sha256 -verify publickey.pem -signature someothersignature.bin message.txt
+
+
+ECDSA using OpenSSL
+~/Crypt$ openssl ecparam -genkey -name secp256k1 -noout -out eccprivatekey.pem                               
+~/Crypt$ cat eccprivatekey.pem
+~/Crypt$ openssl ec -in eccprivatekey.pem -pubout –out eccpublickey.pem
+~/Crypt$ cat eccpublickey.pem
+~/Crypt$ echo testing > testsign.txt
+~/Crypt$ cat testsign.txt
+~/Crypt$ openssl dgst -ecdsa-with-SHA1 -sign eccprivatekey.pem testsign.txt > ecsign.bin
+~/Crypt$ openssl dgst -ecdsa-with-SHA1 -verify eccpublickey.pem -signature ecsign.bin testsign.txt
+~/Crypt$ openssl req -new -key eccprivatekey.pem -x509 -nodes -days 365 -out ecccertificate.pem
+~/Crypt$ openssl x509 -in ecccertificate.pem -text -noout
+
+
+
+
+

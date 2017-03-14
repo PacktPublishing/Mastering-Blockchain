@@ -1,5 +1,5 @@
 # Mastering Blockchain
-This is the code repository for [Mastering Blockchain](https://www.packtpub.com/application-development/ethereum-programming?utm_source=github&utm_medium=repository&utm_campaign=9781786463715), published by [Packt](https://www.packtpub.com/?utm_source=github). It contains all the supporting project files necessary to work through the book from start to finish.
+This is the code repository for [Mastering Blockchain](https://www.packtpub.com/big-data-and-business-intelligence/mastering-blockchain?utm_source=github&utm_medium=repository&utm_content=9781787125445), published by [Packt](https://www.packtpub.com/?utm_source=github). It contains all the supporting project files necessary to work through the book from start to finish.
 ## About the Book
 Blockchain is a distributed database that enables permanent, transparent, and secure storage of data. The blockchain technology is the backbone of cryptocurrency – in fact, it’s the shared public ledger upon which the entire Bitcoin network relies – and it’s gaining popularity with people who work in finance, government, and the arts.
 
@@ -36,9 +36,9 @@ and is available at http://truffleframework.com/. Any latest version available v
 should be appropriate.
 
 ## Related Products
-* [Practical Blockchain Development](https://www.packtpub.com/application-development/ethereum-programming?utm_source=github&utm_medium=repository&utm_campaign=9781786463715)
+* [Practical Blockchain Development](https://www.packtpub.com/application-development/practical-blockchain-development?utm_source=github&utm_medium=repository&utm_content=9781786465603)
 
-* [Building Blockchain Projects](https://www.packtpub.com/application-development/ethereum-programming?utm_source=github&utm_medium=repository&utm_campaign=9781786463715)
+* [Building Blockchain Projects](https://www.packtpub.com/big-data-and-business-intelligence/building-blockchain-projects?utm_source=github&utm_medium=repository&utm_content=9781787122147)
 
 * [Ethereum Programming](https://www.packtpub.com/application-development/ethereum-programming?utm_source=github&utm_medium=repository&utm_campaign=9781786463715)
 

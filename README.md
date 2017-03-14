@@ -15,7 +15,7 @@ This book begins with the technical foundations of blockchain, teaching you the 
 ## Instructions and Navigation
 All of the code is organized into folders. Each folder starts with a number followed by the application name. For example, Chapter02.
 
-Chapter 1, 2, 6, 12, and 13 does not contains any code files
+Chapter 01, 02, 06, 12, and 13 does not contains any code files
 
 The code will look like the following:
 ```

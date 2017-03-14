@@ -28,12 +28,10 @@ zlib1g-dev wget bsdmainutils automake
 All examples in this book have been developed on Ubuntu 16.04.1 LTS (Xenial). As such, it is recommended to use Ubuntu. However, any appropriate operating system, either Windows or Linux, can be used, but examples, especially those related to installation, may
 need to be changed accordingly. Examples related to cryptography have been developed using the OpenSSL 1.0.2g 1 Mar
 2016 command-line tool. Ethereum solidity examples have been developed using Browser Solidity, available online
-at https://ethereum. github. io/browser-solidity/.
+at https://ethereum.github.io/browser-solidity/.
 Ethereum's homestead release is used to develop Ethereum-related examples. At the time of writing, this is the latest version available and can be downloaded from https://www.ethereum.org/.
 Examples related to IoT have been developed using a Raspberry Pi kit by Vilros, but any latest model or kit can be used. Specifically, Raspberry Pi 3 Model B V 1.2 has been used to build a hardware example of IoT. Node.js V7.2.1 and npm V3.10.10 have been used to download related packages and run Node.js server for IoT examples.
-The Truffle framework has been used in some examples of smart contract deployment,
-and is available at http://truffleframework. com/. Any latest version available via npm
-should be appropriate.
+The Truffle framework has been used in some examples of smart contract deployment, and is available at http://truffleframework.com/. Any latest version available via npm should be appropriate.
 
 ##Related Products
 * [Practical Blockchain Development](Current URL?utm_source=github&utm_medium=repository&utm_campaign=9781786465603)
